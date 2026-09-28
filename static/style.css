@@ -1,0 +1,201 @@
+img.Logo {
+    padding-top: 10px;
+    height: 75px;
+}
+
+body {
+    background-image: url("/static/Images/Dark Green Background img.png");
+    background-size: cover;
+    color: grey;
+}
+
+header {
+    position: relative;
+    text-align: center;
+}
+
+form {
+    text-align: right;
+}
+
+.four-column {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+}
+
+.four-column .w3-card-4 {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    height: 300px;
+}
+
+.four-column .w3-card-4 img {
+    display: block;
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.two-column img {
+    width: 400px;
+    margin: auto;
+}
+
+.two-column a {
+  margin: auto;
+}
+
+img.Hero {
+    width: 1200px;
+    object-fit: contain;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.no-results {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.football {
+    position: absolute;
+    left: 0;
+    top: 32px;
+    height: 70px;
+}
+
+button {
+    margin: auto;
+    background-color: grey;
+}
+
+button:hover {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.w3-card-4 button{
+    display: block;
+    text-align: center;
+}
+
+.truncate {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container-hero {
+  max-width: 1000px;
+  position: relative;
+  margin: 50px auto 0;
+}
+
+.slideshow-container-boot {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0px auto 0;
+}
+
+.slideshow-container-boot img {
+  width: 95%;
+  padding: 20px;
+  object-fit: contain;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

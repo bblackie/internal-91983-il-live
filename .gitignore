@@ -1,0 +1,28 @@
+# Python
+[Dd]ist/
+[Bb]uild/
+*.egg-info/
+*.pyc
+*.pyd
+*.pyo
+__pycache__
+*.whl
+# Virtual environment
+.venv
+venv
+env
+# Environment variables (secure credentials)
+.env
+instance/.env
+# Flask specific (e.g., SQLite database file if used for development)
+# Modify "app.db" to match your actual database filename if different
+app.db
+*.sqlite
+*.sqlite3
+# IDE and editor files
+.idea/  # Pycharm
+.vscode/ # VS Code
+.nyc_output
+.coverage
+*.log
+

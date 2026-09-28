@@ -1,0 +1,788 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=OpenSans">
+    <link rel="stylesheet" href="/static/style.css">
+    <title> Football Boots </title>
+</head>
+<body class="w3-container">
+    <!-- Shared Logo Bar -->
+     <header class="w3-container w3-padding-32">
+        <img src="/static/Images/Football.png" alt="Football" class="football">
+        <img src="/static/Images/Nike%20design.png" alt="Nike logo" class="Logo">
+        <img src="/static/Images/Adidas%20design.png" alt="Adidas logo" class="Logo">
+        <img src="/static/Images/Puma%20design.png" alt="Puma logo" class="Logo">
+        <img src="/static/Images/Mizuno%20design.png" alt="Mizuno logo" class="Logo">
+        <img src="/static/Images/New%20Balance%20design.png" alt="New Balance logo" class="Logo">
+        <img src="/static/Images/Asics%20design.png" alt="Asics logo" class="Logo">
+        <img src="/static/Images/Skechers%20design.png" alt="Sketchers logo" class="Logo">
+        <img src="/static/Images/Under%20Armour%20design.png" alt="Under Armour logo" class="Logo">
+
+     </header>
+    <!-- Shared Nav Bar -->
+     <nav class="w3-bar w3-gray">
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="/brand" class="w3-bar-item w3-button">Brands</a>
+        <a href="/admin" class="w3-bar-item w3-button w3-right">Admin</a>
+     </nav>
+        
+
+<div style="text-align: right; padding: 10px 20px; background: #37474f;">
+    <a href="/admin/logout" style="color: white; text-decoration: none;">
+        Log out
+    </a>
+</div>
+
+<div class="w3-container" style="padding: 20px;">
+
+    <h1>Admin — Manage Boots</h1>
+    <a href="/admin/add" class="w3-button w3-dark-grey" style="margin-bottom: 20px;">
+        + Add New Boot
+    </a>
+
+    <table class="w3-table w3-bordered w3-striped">
+        <thead class="w3-dark-grey">
+            <tr>
+                <th>ID</th>
+                <th>Brand</th>
+                <th>Name</th>
+                <th>Release</th>
+                <th>Style</th>
+                <th>ImageURL1</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>1</td>
+                <td>Nike</td>
+                <td>Superfly 11</td>
+                <td>2026</td>
+                <td>Mercurial</td>
+                <td class="truncate">/static/Images/mercurial_superfly_11.png</td>
+                <td>
+                    <a href="/admin/edit/1"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/1"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Superfly 11?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>Nike</td>
+                <td>Vapor 17</td>
+                <td>2026</td>
+                <td>Mercurial</td>
+                <td class="truncate">/static/Images/mercurial_vapor_17.png</td>
+                <td>
+                    <a href="/admin/edit/2"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/2"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Vapor 17?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>Nike</td>
+                <td>Tiempo Ligera Pro</td>
+                <td>2026</td>
+                <td>Tiempo</td>
+                <td class="truncate">/static/Images/ligera_pro.png</td>
+                <td>
+                    <a href="/admin/edit/3"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/3"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Tiempo Ligera Pro?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>Nike</td>
+                <td>Tiempo Maestro</td>
+                <td>2026</td>
+                <td>Tiempo</td>
+                <td class="truncate">/static/Images/maestro.png</td>
+                <td>
+                    <a href="/admin/edit/4"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/4"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Tiempo Maestro?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>5</td>
+                <td>Nike</td>
+                <td>Phantom 6</td>
+                <td>2025</td>
+                <td>Phantom</td>
+                <td class="truncate">/static/Images/phantom_6.png</td>
+                <td>
+                    <a href="/admin/edit/5"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/5"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Phantom 6?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td>Nike</td>
+                <td>Hypervenom RGN</td>
+                <td>2025</td>
+                <td>Hypervenom</td>
+                <td class="truncate">/static/Images/hypervenom_rgn.png</td>
+                <td>
+                    <a href="/admin/edit/6"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/6"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Hypervenom RGN?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>7</td>
+                <td>Nike</td>
+                <td>Superfly 10</td>
+                <td>2024</td>
+                <td>Mercurial</td>
+                <td class="truncate">/static/Images/mercurial_superfly_10.png</td>
+                <td>
+                    <a href="/admin/edit/7"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/7"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Superfly 10?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>8</td>
+                <td>Nike</td>
+                <td>Vapor 16</td>
+                <td>2024</td>
+                <td>Mercurial</td>
+                <td class="truncate">/static/Images/mercurial_vapor_16.png</td>
+                <td>
+                    <a href="/admin/edit/8"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/8"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Nike Vapor 16?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>9</td>
+                <td>Adidas</td>
+                <td>F50 Hyperfast</td>
+                <td>2026</td>
+                <td>F50</td>
+                <td class="truncate">/static/Images/f50_hyperfast.png</td>
+                <td>
+                    <a href="/admin/edit/9"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/9"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Adidas F50 Hyperfast?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>10</td>
+                <td>Adidas</td>
+                <td>Predator 26</td>
+                <td>2026</td>
+                <td>Predator</td>
+                <td class="truncate">/static/Images/predator_26.png</td>
+                <td>
+                    <a href="/admin/edit/10"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/10"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Adidas Predator 26?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>11</td>
+                <td>Adidas</td>
+                <td>Copa Pure IV</td>
+                <td>2026</td>
+                <td>Copa</td>
+                <td class="truncate">/static/Images/copa_pure_4.png</td>
+                <td>
+                    <a href="/admin/edit/11"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/11"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Adidas Copa Pure IV?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td>Adidas</td>
+                <td>F50 Sparkfusion</td>
+                <td>2025</td>
+                <td>F50</td>
+                <td class="truncate">/static/Images/f50_sparkfusion.png</td>
+                <td>
+                    <a href="/admin/edit/12"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/12"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Adidas F50 Sparkfusion?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td>Puma</td>
+                <td>Ultra 7</td>
+                <td>2026</td>
+                <td>Ultra</td>
+                <td class="truncate">/static/Images/ultra_7.png</td>
+                <td>
+                    <a href="/admin/edit/13"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/13"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Puma Ultra 7?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>14</td>
+                <td>Puma</td>
+                <td>Future 9</td>
+                <td>2026</td>
+                <td>Future</td>
+                <td class="truncate">/static/Images/future_9.png</td>
+                <td>
+                    <a href="/admin/edit/14"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/14"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Puma Future 9?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>15</td>
+                <td>Puma</td>
+                <td>King 20</td>
+                <td>2026</td>
+                <td>King</td>
+                <td class="truncate">/static/Images/king_20.png</td>
+                <td>
+                    <a href="/admin/edit/15"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/15"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Puma King 20?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>16</td>
+                <td>Puma</td>
+                <td>Ultra 6</td>
+                <td>2025</td>
+                <td>Ultra</td>
+                <td class="truncate">/static/Images/ultra_6.png</td>
+                <td>
+                    <a href="/admin/edit/16"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/16"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Puma Ultra 6?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>17</td>
+                <td>Mizuno</td>
+                <td>Alpha III</td>
+                <td>2026</td>
+                <td>Alpha</td>
+                <td class="truncate">/static/Images/alpha_3.png</td>
+                <td>
+                    <a href="/admin/edit/17"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/17"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Mizuno Alpha III?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>18</td>
+                <td>Mizuno</td>
+                <td>Morelia Neo V</td>
+                <td>2026</td>
+                <td>Morelia Neo</td>
+                <td class="truncate">/static/Images/morelia_neo_5.png</td>
+                <td>
+                    <a href="/admin/edit/18"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/18"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Mizuno Morelia Neo V?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>19</td>
+                <td>Mizuno</td>
+                <td>Morelia II</td>
+                <td>2026</td>
+                <td>Morelia II</td>
+                <td class="truncate">/static/Images/morelia_2.png</td>
+                <td>
+                    <a href="/admin/edit/19"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/19"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Mizuno Morelia II?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>20</td>
+                <td>Mizuno</td>
+                <td>Alpha II</td>
+                <td>2025</td>
+                <td>Alpha</td>
+                <td class="truncate">/static/Images/alpha_2.png</td>
+                <td>
+                    <a href="/admin/edit/20"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/20"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Mizuno Alpha II?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>21</td>
+                <td>New Balance</td>
+                <td>Furon v9</td>
+                <td>2026</td>
+                <td>Furon</td>
+                <td class="truncate">/static/Images/furon_v9.png</td>
+                <td>
+                    <a href="/admin/edit/21"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/21"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete New Balance Furon v9?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>22</td>
+                <td>New Balance</td>
+                <td>Tekela v5</td>
+                <td>2026</td>
+                <td>Tekela</td>
+                <td class="truncate">/static/Images/tekela_v5.png</td>
+                <td>
+                    <a href="/admin/edit/22"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/22"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete New Balance Tekela v5?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>23</td>
+                <td>New Balance</td>
+                <td>442 v3</td>
+                <td>2026</td>
+                <td>442</td>
+                <td class="truncate">/static/Images/442_v3.png</td>
+                <td>
+                    <a href="/admin/edit/23"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/23"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete New Balance 442 v3?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>24</td>
+                <td>New Balance</td>
+                <td>Furon v8</td>
+                <td>2025</td>
+                <td>Furon</td>
+                <td class="truncate">/static/Images/furon_v8.png</td>
+                <td>
+                    <a href="/admin/edit/24"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/24"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete New Balance Furon v8?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>25</td>
+                <td>ASICS</td>
+                <td>Menace 5</td>
+                <td>2024</td>
+                <td>Menace</td>
+                <td class="truncate">/static/Images/menace_5.png</td>
+                <td>
+                    <a href="/admin/edit/25"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/25"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete ASICS Menace 5?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>26</td>
+                <td>ASICS</td>
+                <td>Jetray</td>
+                <td>2026</td>
+                <td>Jetray</td>
+                <td class="truncate">/static/Images/jetray.png</td>
+                <td>
+                    <a href="/admin/edit/26"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/26"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete ASICS Jetray?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>27</td>
+                <td>ASICS</td>
+                <td>Ultrezza 4</td>
+                <td>2025</td>
+                <td>Ultrezza</td>
+                <td class="truncate">/static/Images/ultrezza_4.png</td>
+                <td>
+                    <a href="/admin/edit/27"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/27"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete ASICS Ultrezza 4?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>28</td>
+                <td>ASICS</td>
+                <td>Swift Strike</td>
+                <td>2023</td>
+                <td>Swift Strike</td>
+                <td class="truncate">/static/Images/swift_strike.png</td>
+                <td>
+                    <a href="/admin/edit/28"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/28"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete ASICS Swift Strike?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>29</td>
+                <td>Skechers</td>
+                <td>Razor 2</td>
+                <td>2026</td>
+                <td>Razor</td>
+                <td class="truncate">/static/Images/razor_2.png</td>
+                <td>
+                    <a href="/admin/edit/29"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/29"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Skechers Razor 2?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>30</td>
+                <td>Skechers</td>
+                <td>SKX_2</td>
+                <td>2025</td>
+                <td>SKX</td>
+                <td class="truncate">/static/Images/skx_2.png</td>
+                <td>
+                    <a href="/admin/edit/30"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/30"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Skechers SKX_2?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>31</td>
+                <td>Skechers</td>
+                <td>Razor 1.5</td>
+                <td>2024</td>
+                <td>Razor</td>
+                <td class="truncate">/static/Images/razor_1.5.png</td>
+                <td>
+                    <a href="/admin/edit/31"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/31"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Skechers Razor 1.5?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>32</td>
+                <td>Skechers</td>
+                <td>SKX_01</td>
+                <td>2023</td>
+                <td>SKX</td>
+                <td class="truncate">/static/Images/skx_01.png</td>
+                <td>
+                    <a href="/admin/edit/32"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/32"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Skechers SKX_01?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>33</td>
+                <td>Under Armour</td>
+                <td>Shadow 4</td>
+                <td>2026</td>
+                <td>Shadow</td>
+                <td class="truncate">/static/Images/shadow_4.png</td>
+                <td>
+                    <a href="/admin/edit/33"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/33"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Under Armour Shadow 4?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>34</td>
+                <td>Under Armour</td>
+                <td>Magnetico 6</td>
+                <td>2026</td>
+                <td>Magnetico</td>
+                <td class="truncate">/static/Images/magnetico_6.png</td>
+                <td>
+                    <a href="/admin/edit/34"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/34"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Under Armour Magnetico 6?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>35</td>
+                <td>Under Armour</td>
+                <td>Shadow 3.0</td>
+                <td>2025</td>
+                <td>Shadow</td>
+                <td class="truncate">/static/Images/shadow_3.png</td>
+                <td>
+                    <a href="/admin/edit/35"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/35"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Under Armour Shadow 3.0?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>36</td>
+                <td>Under Armour</td>
+                <td>Magnetico 5</td>
+                <td>2025</td>
+                <td>Magnetico</td>
+                <td class="truncate">/static/Images/magnetico_5.png</td>
+                <td>
+                    <a href="/admin/edit/36"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="/admin/delete/36"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete Under Armour Magnetico 5?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>

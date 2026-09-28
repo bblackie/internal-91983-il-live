@@ -1,0 +1,12 @@
+-- database: ./database.db
+CREATE TABLE users (
+    user_id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    username      TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL
+);
+
+UPDATE sqlite_sequence
+SET seq = (SELECT MAX(BootID) FROM Boots)
+WHERE name = 'Boots';
+
+SELECT * FROM Boots;

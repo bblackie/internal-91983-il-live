@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="w3-container" style="padding: 20px; max-width: 600px;">
+
+    <h2>{{ title }}</h2>
+
+    <form method="post">
+
+        <label>Brand</label>
+        <select name="BrandID" class="w3-select w3-border" style="margin-bottom: 12px;" required>
+            <option value="">-- Select a Brand --</option>
+            {% for brand in brands %}
+            <option value="{{ brand[0] }}"
+                            {% if boot and boot[0] == brand[0] %}selected{% endif %}>
+                {{ brand[1] }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <label>Name</label>
+        <input class="w3-input w3-border" style="margin-bottom: 12px;"
+               type="text" name="Name" required
+               value="{{ boot[1] if boot else '' }}">
+
+        <label>Brand</label>
+        <input class="w3-input w3-border" style="margin-bottom: 12px;"
+               type="text" name="Brand" required
+               value="{{ boot[2] if boot else '' }}">
+
+        <label>Release</label>
+        <input class="w3-input w3-border" style="margin-bottom: 12px;"
+               type="number" name="Release" min="2023" max="2026"
+               value="{{ boot[3] if boot else '' }}">
+
+        <label>Style</label>
+        <input class="w3-input w3-border" style="margin-bottom: 12px;"
+               type="text" name="Style"
+               value="{{ boot[4] if boot else '' }}">
+        
+        <label>Description</label>
+        <input class="w3-input w3-border" style="margin-bottom: 20px;"
+               type="text" name="Description"
+               value="{{ boot[5] if boot else '' }}">
+
+        <label>Image URL 1</label>
+        <input class="w3-input w3-border" style="margin-bottom: 20px;"
+               type="text" name="ImageURL1"
+               value="{{ boot[6] if boot else '/static/Images/' }}">
+
+        <label>Image URL 2</label>
+        <input class="w3-input w3-border" style="margin-bottom: 20px;"
+               type="text" name="ImageURL2"
+               value="{{ boot[7] if boot else '/static/Images/' }}">
+
+        <label>Image URL 3</label>
+        <input class="w3-input w3-border" style="margin-bottom: 20px;"
+               type="text" name="ImageURL3"
+               value="{{ boot[8] if boot else '/static/Images/' }}">
+
+        <label>Image URL 4</label>
+        <input class="w3-input w3-border" style="margin-bottom: 20px;"
+               type="text" name="ImageURL4"
+               value="{{ boot[9] if boot else '/static/Images/' }}">
+
+        <label>Image URL 5</label>
+        <input class="w3-input w3-border" style="margin-bottom: 20px;"
+               type="text" name="ImageURL5"
+               value="{{ boot[10] if boot else '/static/Images/' }}">
+
+        <button type="submit" class="w3-button w3-dark-grey">Save</button>
+        <a href="{{ url_for('admin') }}" class="w3-button w3-light-grey">Cancel</a>
+
+    </form>
+
+</div>
+
+{% endblock %}

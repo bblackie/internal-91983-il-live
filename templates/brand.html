@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- brand page -->
+
+    <!-- Filter bar -->
+    <form method="get" action="/brand" class="filter-bar">
+
+        <select name="BrandID" onchange="this.form.submit()">
+            <option value="">All Brands</option>
+            {% for brand in brands %}
+            <option value="{{ brand[0] }}"
+                {% if selected_brand == brand[0]|string %}selected{% endif %}>
+                {{ brand[1] }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <select name="Release" onchange="this.form.submit()">
+            <option value="">All Release Years</option>
+            {% for year in years %}
+            <option value="{{ year[0] }}"
+                {% if selected_year == year[0]|string %}selected{% endif %}>
+                {{ year[0] }}
+            </option>
+            {% endfor %}
+        </select>
+    
+        <input type="text" 
+            maxlength="30" 
+            name="search" 
+            placeholder="Search boots..." 
+            value="{{ search }}">
+    
+
+        <button type="submit">Search</button>
+
+        {% if selected_brand or search %}
+        <a href="/brand" class="clear-link">Clear filters</a>
+        {% endif %}
+
+    </form>
+
+
+ <!-- a 4 column grid -->
+<div class="four-column">
+  {% for boot in results %}
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>{{ boot[1]}}: {{boot[2]}}</p>
+        <img src="{{ boot[3] }}" alt="{{ boot[2] }}">
+        <form action="{{ url_for('boot', id=boot[0]) }}" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- error message for incorrect input -->
+{% if not results %}
+<p class="no-results">No results found. <br> Check your spelling of the boot name and filters and try again. <br> <a href="/brand">Clear filters</a></p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div style="text-align: right; padding: 10px 20px; background: #37474f;">
+    <a href="{{ url_for('admin_logout') }}" style="color: white; text-decoration: none;">
+        Log out
+    </a>
+</div>
+
+<div class="w3-container" style="padding: 20px;">
+
+    <h1>Admin — Manage Boots</h1>
+    <a href="{{ url_for('admin_add') }}" class="w3-button w3-dark-grey" style="margin-bottom: 20px;">
+        + Add New Boot
+    </a>
+
+    <table class="w3-table w3-bordered w3-striped">
+        <thead class="w3-dark-grey">
+            <tr>
+                <th>ID</th>
+                <th>Brand</th>
+                <th>Name</th>
+                <th>Release</th>
+                <th>Style</th>
+                <th>ImageURL1</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for boot in boots %}
+            <tr>
+                <td>{{ boot[0] }}</td>
+                <td>{{ boot[1] }}</td>
+                <td>{{ boot[2] }}</td>
+                <td>{{ boot[3] }}</td>
+                <td>{{ boot[4] }}</td>
+                <td class="truncate">{{ boot[5] }}</td>
+                <td>
+                    <a href="{{ url_for('admin_edit', id=boot[0]) }}"
+                       class="w3-button w3-small w3-blue">Edit</a>
+
+                    <form method="post"
+                          action="{{ url_for('admin_delete', id=boot[0]) }}"
+                          style="display:inline;"
+                          onsubmit="return confirm('Delete {{ boot[1] }} {{ boot[2] }}?')">
+                        <button type="submit" class="w3-button w3-small w3-red">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

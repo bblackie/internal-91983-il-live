@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Just one player-->
+ <!-- two column grid-->
+<div class="two-column">
+    
+    <!-- Image (slideshow) on left -->
+     <div class="slideshow-container-boot">
+    <img class="mySlides" src="{{ boot[8] }}" alt="{{ boot[2] }}">
+    <img class="mySlides" src="{{ boot[9] }}" alt="{{ boot[2] }}">
+    <img class="mySlides" src="{{ boot[10] }}" alt="{{ boot[2] }}">
+    <img class="mySlides" src="{{ boot[11] }}" alt="{{ boot[2] }}">
+    <img class="mySlides" src="{{ boot[12] }}" alt="{{ boot[2] }}">
+     
+    <!-- Slideshow controls -->
+    <button class="w3-button w3-display-left"
+    onclick="plusDivs(-1)">&#10094;</button>
+
+    <button class="w3-button w3-display-right"
+    onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+    
+    <!-- Info panel -->
+    <div class="info">
+        <h1><b> Boot Name: {{ boot[2] }} </b></h1>
+        <h2> <b>Brand: </b> {{ boot[3] }}</h2>
+        <h3><b> Style: </b> {{ boot[4] }}</h3>
+        <h4> <b>Positions:</b> {{ boot[5] }} </h4>
+        <h4> <b>Release Year:</b> {{ boot[6] }}</h4>
+        <h5> <b>Description:</b> </h5> <h6>{{ boot[7] }}</h6>
+    </div>
+</div>
+<script src="{{url_for('static', filename='static1.js')}}"></script>
+{% endblock %}

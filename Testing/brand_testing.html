@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=OpenSans">
+    <link rel="stylesheet" href="/static/style.css">
+    <title> Football Boots </title>
+</head>
+<body class="w3-container">
+    <!-- Shared Logo Bar -->
+     <header class="w3-container w3-padding-32">
+        <img src="/static/Images/Football.png" alt="Football" class="football">
+        <img src="/static/Images/Nike%20design.png" alt="Nike logo" class="Logo">
+        <img src="/static/Images/Adidas%20design.png" alt="Adidas logo" class="Logo">
+        <img src="/static/Images/Puma%20design.png" alt="Puma logo" class="Logo">
+        <img src="/static/Images/Mizuno%20design.png" alt="Mizuno logo" class="Logo">
+        <img src="/static/Images/New%20Balance%20design.png" alt="New Balance logo" class="Logo">
+        <img src="/static/Images/Asics%20design.png" alt="Asics logo" class="Logo">
+        <img src="/static/Images/Skechers%20design.png" alt="Sketchers logo" class="Logo">
+        <img src="/static/Images/Under%20Armour%20design.png" alt="Under Armour logo" class="Logo">
+
+     </header>
+    <!-- Shared Nav Bar -->
+     <nav class="w3-bar w3-gray">
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="/brand" class="w3-bar-item w3-button">Brands</a>
+        <a href="/admin" class="w3-bar-item w3-button w3-right">Admin</a>
+     </nav>
+        
+<!-- brand page -->
+
+    <!-- Filter bar -->
+    <form method="get" action="/brand" class="filter-bar">
+
+        <select name="BrandID" onchange="this.form.submit()">
+            <option value="">All Brands</option>
+            
+            <option value="6"
+                >
+                ASICS
+            </option>
+            
+            <option value="2"
+                >
+                Adidas
+            </option>
+            
+            <option value="4"
+                >
+                Mizuno
+            </option>
+            
+            <option value="5"
+                >
+                New Balance
+            </option>
+            
+            <option value="1"
+                >
+                Nike
+            </option>
+            
+            <option value="3"
+                >
+                Puma
+            </option>
+            
+            <option value="7"
+                >
+                Skechers
+            </option>
+            
+            <option value="8"
+                >
+                Under Armour
+            </option>
+            
+        </select>
+
+        <select name="Release" onchange="this.form.submit()">
+            <option value="">All Release Years</option>
+            
+            <option value="2023"
+                >
+                2023
+            </option>
+            
+            <option value="2024"
+                >
+                2024
+            </option>
+            
+            <option value="2025"
+                >
+                2025
+            </option>
+            
+            <option value="2026"
+                >
+                2026
+            </option>
+            
+        </select>
+    
+        <input type="text" 
+            maxlength="30" 
+            name="search" 
+            placeholder="Search boots..." 
+            value="">
+    
+
+        <button type="submit">Search</button>
+
+        
+
+    </form>
+
+
+ <!-- a 4 column grid -->
+<div class="four-column">
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Superfly 11</p>
+        <img src="/static/Images/mercurial_superfly_11.png" alt="Superfly 11">
+        <form action="/boot/1" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Vapor 17</p>
+        <img src="/static/Images/mercurial_vapor_17.png" alt="Vapor 17">
+        <form action="/boot/2" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Tiempo Ligera Pro</p>
+        <img src="/static/Images/ligera_pro.png" alt="Tiempo Ligera Pro">
+        <form action="/boot/3" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Tiempo Maestro</p>
+        <img src="/static/Images/maestro.png" alt="Tiempo Maestro">
+        <form action="/boot/4" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Phantom 6</p>
+        <img src="/static/Images/phantom_6.png" alt="Phantom 6">
+        <form action="/boot/5" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Hypervenom RGN</p>
+        <img src="/static/Images/hypervenom_rgn.png" alt="Hypervenom RGN">
+        <form action="/boot/6" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Superfly 10</p>
+        <img src="/static/Images/mercurial_superfly_10.png" alt="Superfly 10">
+        <form action="/boot/7" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Nike: Vapor 16</p>
+        <img src="/static/Images/mercurial_vapor_16.png" alt="Vapor 16">
+        <form action="/boot/8" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Adidas: F50 Hyperfast</p>
+        <img src="/static/Images/f50_hyperfast.png" alt="F50 Hyperfast">
+        <form action="/boot/9" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Adidas: Predator 26</p>
+        <img src="/static/Images/predator_26.png" alt="Predator 26">
+        <form action="/boot/10" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Adidas: Copa Pure IV</p>
+        <img src="/static/Images/copa_pure_4.png" alt="Copa Pure IV">
+        <form action="/boot/11" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Adidas: F50 Sparkfusion</p>
+        <img src="/static/Images/f50_sparkfusion.png" alt="F50 Sparkfusion">
+        <form action="/boot/12" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Puma: Ultra 7</p>
+        <img src="/static/Images/ultra_7.png" alt="Ultra 7">
+        <form action="/boot/13" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Puma: Future 9</p>
+        <img src="/static/Images/future_9.png" alt="Future 9">
+        <form action="/boot/14" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Puma: King 20</p>
+        <img src="/static/Images/king_20.png" alt="King 20">
+        <form action="/boot/15" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Puma: Ultra 6</p>
+        <img src="/static/Images/ultra_6.png" alt="Ultra 6">
+        <form action="/boot/16" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Mizuno: Alpha III</p>
+        <img src="/static/Images/alpha_3.png" alt="Alpha III">
+        <form action="/boot/17" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Mizuno: Morelia Neo V</p>
+        <img src="/static/Images/morelia_neo_5.png" alt="Morelia Neo V">
+        <form action="/boot/18" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Mizuno: Morelia II</p>
+        <img src="/static/Images/morelia_2.png" alt="Morelia II">
+        <form action="/boot/19" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Mizuno: Alpha II</p>
+        <img src="/static/Images/alpha_2.png" alt="Alpha II">
+        <form action="/boot/20" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>New Balance: Furon v9</p>
+        <img src="/static/Images/furon_v9.png" alt="Furon v9">
+        <form action="/boot/21" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>New Balance: Tekela v5</p>
+        <img src="/static/Images/tekela_v5.png" alt="Tekela v5">
+        <form action="/boot/22" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>New Balance: 442 v3</p>
+        <img src="/static/Images/442_v3.png" alt="442 v3">
+        <form action="/boot/23" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>New Balance: Furon v8</p>
+        <img src="/static/Images/furon_v8.png" alt="Furon v8">
+        <form action="/boot/24" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>ASICS: Menace 5</p>
+        <img src="/static/Images/menace_5.png" alt="Menace 5">
+        <form action="/boot/25" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>ASICS: Jetray</p>
+        <img src="/static/Images/jetray.png" alt="Jetray">
+        <form action="/boot/26" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>ASICS: Ultrezza 4</p>
+        <img src="/static/Images/ultrezza_4.png" alt="Ultrezza 4">
+        <form action="/boot/27" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>ASICS: Swift Strike</p>
+        <img src="/static/Images/swift_strike.png" alt="Swift Strike">
+        <form action="/boot/28" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Skechers: Razor 2</p>
+        <img src="/static/Images/razor_2.png" alt="Razor 2">
+        <form action="/boot/29" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Skechers: SKX_2</p>
+        <img src="/static/Images/skx_2.png" alt="SKX_2">
+        <form action="/boot/30" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Skechers: Razor 1.5</p>
+        <img src="/static/Images/razor_1.5.png" alt="Razor 1.5">
+        <form action="/boot/31" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Skechers: SKX_01</p>
+        <img src="/static/Images/skx_01.png" alt="SKX_01">
+        <form action="/boot/32" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Under Armour: Shadow 4</p>
+        <img src="/static/Images/shadow_4.png" alt="Shadow 4">
+        <form action="/boot/33" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Under Armour: Magnetico 6</p>
+        <img src="/static/Images/magnetico_6.png" alt="Magnetico 6">
+        <form action="/boot/34" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Under Armour: Shadow 3.0</p>
+        <img src="/static/Images/shadow_3.png" alt="Shadow 3.0">
+        <form action="/boot/35" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+    <div class="w3-card-4">
+        <!-- name then image -->
+        <p>Under Armour: Magnetico 5</p>
+        <img src="/static/Images/magnetico_5.png" alt="Magnetico 5">
+        <form action="/boot/36" method="get">
+            <button type="submit">View Details</button>
+        </form>
+    </div>
+  
+</div>
+
+<!-- error message for incorrect input -->
+
+
+
+</body>
+</html>
