@@ -26,7 +26,7 @@ Open a terminal and type.
 
  
 
-python -m venv .venv 
+python -m venv .venv
  
 
  
@@ -43,7 +43,7 @@ This creates a .venv folder inside the project. That folder contains a separate 
 
  
 
-.venv\Scripts\Activate.ps1 
+.venv\Scripts\Activate.ps1
  
 
  
